@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="div">
+        <h2 style="text-align:center">Contact Us </h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, autem dolorem. Amet repellendus commodi, perferendis ad iure <br> sint vero quas eligendi atque non neque cupiditate. Odio assumenda velit illum consectetur!</p>
+        <p>Catagory is : {{ $catagory }}</p>
+        
+        <div class="menu">
+            <ul>
+                <li><a href="{{ URL :: to('/')}}" >  Home </a></li>
+                <li><a href="{{ URL :: to('about-us')}}"> About Us </a></li>
+                <li><a href="{{url('contact/people')}}"> Contact </a></li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
