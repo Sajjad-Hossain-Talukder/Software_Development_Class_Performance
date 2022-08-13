@@ -5,6 +5,8 @@ use App\Http\Controllers\PersonControl;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +44,10 @@ Route::get('register', [AuthController::class , 'register']);
 Route::post('store-register', [AuthController::class , 'storeregister']);
 
 Route::get('pending-list', [AuthController::class , 'pendlist']);
+
+
+
+Route::get('insert-category', [CategoryController::class , 'show']);
 
 
 
