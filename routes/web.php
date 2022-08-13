@@ -48,6 +48,8 @@ Route::get('pending-list', [AuthController::class , 'pendlist']);
 
 
 Route::get('insert-category', [CategoryController::class , 'show']);
+Route::post('store-category', [CategoryController::class , 'store']);
+
 
 
 

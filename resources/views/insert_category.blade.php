@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
-                <form method='post' action="{{url('store-register')}}">
+                <form method='post' action="{{url('store-category')}}">
                     {{ csrf_field() }}
 
         
@@ -29,8 +29,9 @@
                         <input type="number" name='so' class='form-control'>
                     </div>
                     <div class="form-group">
+                        <input type="hidden"  name="act" value="0">
                         <input type="checkbox"  name="act" value="1">
-                        <label for="act"> Activate </label><br>
+                        <label for="act"> Active </label><br>
                     </div>
     
                 
