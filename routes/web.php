@@ -51,6 +51,7 @@ Route::get('insert-category', [CategoryController::class , 'show']);
 Route::post('store-category', [CategoryController::class , 'store']);
 
 
+Route::get('insert-product', [CategoryController::class , 'showproduct']);
 
 
 
