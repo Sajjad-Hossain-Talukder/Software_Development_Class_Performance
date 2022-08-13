@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
-                <form method='post' action="{{url('store-category')}}">
+                <form method='post' action="{{url('store-product')}}">
                     {{ csrf_field() }}
 
         

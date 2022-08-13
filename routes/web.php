@@ -52,7 +52,8 @@ Route::post('store-category', [CategoryController::class , 'store']);
 
 
 Route::get('insert-product', [CategoryController::class , 'showproduct']);
+Route::post('store-product', [CategoryController::class , 'storeproduct']);
 
 
-
-
+Route::get('category-list', [CategoryController::class , 'clist']);
+Route::get('product-list', [CategoryController::class , 'plist']);
