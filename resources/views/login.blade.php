@@ -61,6 +61,7 @@
                                     <strong> {{  Session::get('fail') }}</strong>
                                 </div>
                             @endif
+                            
 
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
@@ -68,6 +69,7 @@
                                     <input type="email"  class="form-control" name="email" required autofocus>
                                 </div>
                             </div>
+
 
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
@@ -83,6 +85,8 @@
                                     Login
                                 </button>
                             </div>
+
+
                     </div>
                     </form>
                 </div>

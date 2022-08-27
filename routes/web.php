@@ -57,3 +57,10 @@ Route::post('store-product', [CategoryController::class , 'storeproduct']);
 
 Route::get('category-list', [CategoryController::class , 'clist']);
 Route::get('product-list', [CategoryController::class , 'plist']);
+
+
+Route::get('dashboard',[AuthController::class , 'dashboard'])->middleware('checkloggedin');
+
+
+Route::get('logout',[AuthController::class , 'logout']);
+

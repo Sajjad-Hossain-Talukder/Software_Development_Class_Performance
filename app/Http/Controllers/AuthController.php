@@ -16,20 +16,21 @@ class AuthController extends Controller
         $pass = $req->password;
         $user = DB::table('users')
         ->where('email','=',$email) 
-        ->where('password','=',md5($pass)) 
+        ->where('password','=',$pass) 
         ->first();
-    
-
-        if( $user->is_approved =='No'){
+        if( $user == null  ){
+            return redirect()->back()->with('fail','Failed to login!!');
+        }
+        
+        if( $user->is_approved == "No"){
             return redirect()->back()->with('fail','Failed to login!!');
         }
         else {
-            Session::put('usrname' , $user->name ); 
-            Session::put('usrrole' , $user->role ); 
-
+            Session::put('username' , $user->name ); 
+            Session::put('userrole' , $user->role ); 
             
-
-             return redirect('pending-list');
+            return redirect('dashboard');
+            //return redirect('pending-list');
         }
         
     }
@@ -62,5 +63,18 @@ class AuthController extends Controller
         $usr = DB::table('users') ->where('is_approved' ,'No') ->get() ; 
         return view('pendlist',['user'=>$usr]);
     }
+
+
+    public function dashboard(){
+        return view('dashboard');
+    }
+
+    public function logout(){
+        Session::forget('username');
+        return redirect('login');
+    }
+
+
+
 
 }
