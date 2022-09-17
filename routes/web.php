@@ -6,6 +6,7 @@ use App\Http\Controllers\FirstController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,4 +64,9 @@ Route::get('dashboard',[AuthController::class , 'dashboard'])->middleware('check
 
 
 Route::get('logout',[AuthController::class , 'logout']);
+
+Route::get('create-employee', [EmployeeController::class , 'employee_control']);
+
+
+
 
